@@ -17,7 +17,8 @@ const io = require('socket.io')(server,{
 });
 
 
-mongoose.connect('mongodb+srv://semana:week@goweek-backend.0toen.mongodb.net/instagramClone?retryWrites=true&w=majority',
+
+mongoose.connect(`mongodb+srv://${process.env.USER}:${process.env.PASSWORD}@goweek-backend.0toen.mongodb.net/instagramClone?retryWrites=true&w=majority`,
     {
         useNewUrlParser: true,
     }
